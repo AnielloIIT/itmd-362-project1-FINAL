@@ -53,6 +53,24 @@ img last {
      grid-area: content;
  }
 
+ form {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  grid-gap: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+label {
+  grid-column: 1 / 2;
+  font-size: 20px;
+}
+
+input, button, .block {
+  grid-column: 2 / 3;
+}
+
+
+
 @media screen and (max-width: 640px) {
   wrapper {
     display: grid;
