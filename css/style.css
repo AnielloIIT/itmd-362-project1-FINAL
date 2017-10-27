@@ -212,14 +212,17 @@ label {
 
 /* ===== START OF GLOABL CSS RULES ===== */
 
+.color{
+  color: #FF851B;
+}
+
 
 .wrapper {
   display : grid;
   grid-template-columns : 1fr;
   max-width : 1200px;
-  margin-right : auto;
-  margin-left : auto;
-  grid-gap : 1em;
+  margin: 20px auto;
+  grid-gap : 2em;
   text-align : center;
   overflow : hidden;
 }
@@ -230,6 +233,7 @@ label {
 img {
   height : auto;
   overflow : hidden;
+  margin: auto;
 }
 img last {
   max-width : 300px;
@@ -255,7 +259,7 @@ form {
   grid-template-columns : 150px 1fr;
   grid-gap : 16px;
   font-family : 'Open Sans', sans-serif;
-  max-width: 800px;
+  max-width: 600px;
   margin: auto;
 }
 label {
@@ -289,18 +293,43 @@ textarea {
   height : 200px;
 }
 
+p {
+  font-size: 16px;
+  padding: 1em;
+}
+
+
+body{
+  font-family: Helvetica, 'Franklin Gothic Medium', 'Arial Narrow', Arial, 'Roboto', sans-serif;
+  line-height: 1.5;
+  font-family: 'Roboto', 'sans-serif';
+  }
+  
+h1{
+  font-family: Helvetica;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+h3{
+  font-family: Helvetica;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  padding: 10px;
+}
+
 
 
 @media screen and (max-width: 730px) {
   wrapper {
     display: grid;
     grid-template-columns: 1fr;
-    max-width: 640px;
-    margin-right: auto;
-    margin-left: auto;
-    grid-gap: 1em;
+    grid-gap : .8em;
     text-align: center;
     overflow: hidden;
+    margin: auto;
   }
   
   .nested {
@@ -313,6 +342,7 @@ textarea {
   img {
     width: 300px;
     height: auto;
+    align-self: center;
   }
   
   .nested img {
@@ -352,7 +382,7 @@ textarea {
     background: #dfdfdf;
     border: none;
     height: 200px;
-    width: 400px;
+    width: auto;
     margin: auto;
   }
 }
@@ -362,10 +392,9 @@ textarea {
     wrapper {
       display: grid;
       grid-template-columns: 1fr;
-      margin-right: auto;
-      margin-left: auto;
-      grid-gap: 1em;
+      grid-gap: .5em;
       text-align: center;
+      margin: auto;
       overflow: hidden;
     }
     
@@ -379,18 +408,19 @@ textarea {
     img {
       width: 200px;
       height: auto;
+      margin: auto;
     }
     
     .nested img {
-      width:300px;
-      height: 350px;
+      width: 200px;
+      height: 250px;
     }
 
     textarea {
       background: #dfdfdf;
       border: none;
       height: 200px;
-      width: 400px;
+      width: auto;
       margin: auto;
   }
   
@@ -400,6 +430,7 @@ textarea {
     grid-gap: 16px;
     font-family: 'Open Sans', sans-serif;
     overflow: hidden;
+    margin: auto;
   }
   
   label {
@@ -415,7 +446,7 @@ textarea {
     background: #dfdfdf;
     border: none;
     padding: 1em;
-    width: 150px;
+    width: auto;
     height: 80px;
     margin: auto;
     font-size: 20px;
@@ -425,7 +456,7 @@ textarea {
     background: #dfdfdf;
     border: none;
     height: 200px;
-    width: 400px;
+    width: auto;
     margin: auto;
   }
 
