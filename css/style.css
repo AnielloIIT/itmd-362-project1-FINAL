@@ -11,7 +11,7 @@
   margin-left: auto;
   grid-gap: 1em;
   text-align: center;
-  
+  overflow: hidden;
 }
 
 .nested {
@@ -50,7 +50,7 @@ img last {
  }
  
  .content {
-     grid-area: content;
+   grid-area: content;
  }
 
  form {
@@ -69,9 +69,35 @@ input, button, .block {
   grid-column: 2 / 3;
 }
 
+input {
+  background: #dfdfdf;
+  border: none;
+}
+
+button {
+  background: #dfdfdf;
+  border: none;
+  padding: .3em;
+}
+
+button:hover {
+  background: darkgray;
+}
+
+select {
+  background-color: #dfdfdf;
+  outline: 0;
+}
+
+textarea {
+  background: #dfdfdf;
+  border: none;
+  height: 200px;
+}
 
 
-@media screen and (max-width: 640px) {
+
+@media screen and (max-width: 730px) {
   wrapper {
     display: grid;
     grid-template-columns: 1fr;
@@ -80,7 +106,7 @@ input, button, .block {
     margin-left: auto;
     grid-gap: 1em;
     text-align: center;
-    
+    overflow: hidden;
   }
   
   .nested {
@@ -100,5 +126,82 @@ input, button, .block {
     float: center;
     width: 400px;
     height: 350px;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    grid-gap: 16px;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  label {
+    grid-column: 1 / 2;
+    font-size: 20px;
+  }
+  
+  input, button, .block {
+    grid-column: 2 / 3;
+  }
+
+  button {
+    background: #dfdfdf;
+    border: none;
+    padding: 1em;
+    width: 150px;
+    height: 80px;
+    margin: auto;
+    font-size: 20px;
+  }
+
+  textarea {
+    background: #dfdfdf;
+    border: none;
+    height: 200px;
+    width: 400px;
+    margin: auto;
+  }
+
+
+  @media only screen and (max-width: 480px) {
+
+    wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      max-width: 480px;
+      margin-right: auto;
+      margin-left: auto;
+      grid-gap: 1em;
+      text-align: center;
+      overflow: hidden;
+    }
+    
+    .nested {
+      display:grid;
+      grid-template-columns: 1fr;
+      grid-auto-rows: auto;
+      grid-gap:1em;
+    }
+  
+    img {
+      float: center;
+      width: 200px;
+      height: auto;
+    }
+    
+    .nested img {
+      float: center;
+      width:300px;
+      height: 350px;
+    }
+
+    textarea {
+      background: #dfdfdf;
+      border: none;
+      height: 200px;
+      width: 400px;
+      margin: auto;
+  }
+
   }
 }
